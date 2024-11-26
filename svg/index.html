@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Refined Developer Card</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: #f5f5f5;
+    }
+
+    /* Card Container */
+    .dev-card {
+      width: 320px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      padding: 16px;
+    }
+
+    .dev-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Color Ball */
+    .color-ball {
+      width: 40px;
+      height: 40px;
+      background: #4caf50;
+      border-radius: 50%;
+      position: absolute;
+      top: -20px;
+      left: 20px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .dev-card:hover .color-ball {
+      transform: translateY(10px) scale(1.1);
+    }
+
+    /* Content Section */
+    .dev-card-content {
+      text-align: left;
+    }
+
+    .dev-title {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333333;
+      margin: 0;
+      transition: color 0.3s ease;
+    }
+
+    .dev-card:hover .dev-title {
+      color: #4caf50;
+    }
+
+    .price {
+      font-size: 18px;
+      color: #777777;
+      margin-top: 8px;
+      transition: color 0.3s ease;
+    }
+
+    .dev-card:hover .price {
+      color: #333333;
+    }
+
+    /* Icon Section */
+    .svg-plus {
+      width: 24px;
+      height: 24px;
+      fill: #777;
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    .dev-card:hover .svg-plus {
+      transform: rotate(90deg);
+    }
+
+    /* Icon */
+    .svg-dev {
+      width: 50px;
+      height: 50px;
+      fill: #4caf50;
+      margin-bottom: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    .dev-card:hover .svg-dev {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="dev-card">
+    <!-- Color Ball -->
+    <div class="color-ball"></div>
+
+    <!-- Content -->
+    <div class="dev-card-content">
+      <!-- Developer Icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" class="svg-dev" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" />
+        <line x1="12" y1="6" x2="12" y2="18" />
+        <line x1="6" y1="12" x2="18" y2="12" />
+      </svg>
+      <!-- Developer Title -->
+      <h2 class="dev-title">Senior Dev</h2>
+      <!-- Price -->
+      <p class="price">$1800/m</p>
+    </div>
+
+    <!-- Plus Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="svg-plus" viewBox="0 0 24 24">
+      <line x1="12" y1="5" x2="12" y2="19" />
+      <line x1="5" y1="12" x2="19" y2="12" />
+    </svg>
+  </div>
+</body>
+</html>
